@@ -1,0 +1,9 @@
+runtime: python39
+
+handlers:
+- url: /static
+  static_dir: web-cv
+
+- url: /(.*\.(html|css|js|jpg|jpeg|png|gif|ico))
+  static_files: web-cv/\1
+  upload: web-cv/(.*\.(html|css|js|jpg|jpeg|png|gif|ico))
